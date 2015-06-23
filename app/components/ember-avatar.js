@@ -3,7 +3,9 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   address: '',
   name: '',
-
+  mark: '✓',
+  unmarked: true,
+	
   avatarUrl: function() {
     var address = this.get('address');
 
@@ -16,4 +18,9 @@ export default Ember.Component.extend({
 	return name[0];
   }.property('name'),
 	
+  click: function() {
+	var marked = this.get('unmarked');
+	this.set('unmarked',!marked);  
+  },
+  
 });

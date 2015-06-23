@@ -1,9 +1,13 @@
-{{#if avatarUrl}}
-	<img src={{avatarUrl}}> <br>
+{{#if unmarked}}
+	{{#if avatarUrl}}
+		<img src={{avatarUrl}}> <br>
+	{{else}}
+		<h1>{{firstLetter}}</h1>
+	{{/if}}
+	
 {{else}}
-	<h1>{{firstLetter}}</h1>
+	<h1>{{mark}}</h1>
 {{/if}}
-
 
 {{yield}}
 

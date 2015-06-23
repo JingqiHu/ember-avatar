@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
 	url2: 'assets/images/a1.png',
 	name1: 'Jeremy',
 	store: '',
-	mark: '✓',
+	empty: '',
 	state: true,
 	clean: true,
 	
@@ -27,7 +27,8 @@ export default Ember.Controller.extend({
 			this.set('clean', false);
 			var current= this.get('url');
 			this.set('store',current);
-			this.set('url',null);
+			var empty = this.get('empty');
+			this.set('url',empty);
 			//console.log('store:'+this.get('store'));
 		},	
 		
@@ -38,6 +39,5 @@ export default Ember.Controller.extend({
 			//console.log('Url:'+this.get('url'));
 		},	
 	},
-	
 
 });
