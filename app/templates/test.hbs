@@ -1,15 +1,35 @@
-<h2 id="title">LeveL 2</h2>
+{{#if clean}}
+	<button {{action 'clean'}}>Clean</button>
+{{else}}
+	<button {{action 'get'}}>Get</button>
+{{/if}}
+
+<h2 id="title">Select Url first ,then Initial</h2>
 
 {{ember-avatar address=url }}
 
-{{#if state}}
-<button {{action 'selected'}}>On</button>
+<h3 id="title">Switch gavatar</h3>
+
+{{#if url}} 
+
+	{{#if state}}
+		<button {{action 'selected'}}>On</button>
+	{{else}}
+		<button {{action 'unselected'}}>Off</button>
+	{{/if}}
+
+	<br>
+	<br>
+	<br>
 {{else}}
-<button {{action 'unselected'}}>Off</button>
+
+	{{#if name1}} 	
+		<p>Display Initial below</p>
+	{{ember-avatar name=name1 }}
+	
+	{{else}}
+		<p>Neither Url nor Initial</p>
+	
+	{{/if}}
+	
 {{/if}}
-
-
-<p>Display Initial... </p>
-
-{{ember-avatar name=name1 }}
-

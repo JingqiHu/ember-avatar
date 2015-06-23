@@ -5,8 +5,10 @@ export default Ember.Controller.extend({
 	url1: 'assets/images/a2.png',
 	url2: 'assets/images/a1.png',
 	name1: 'Jeremy',
-	initial: '',
+	store: '',
+	mark: '✓',
 	state: true,
+	clean: true,
 	
 	actions: {
 		selected: function() {
@@ -19,7 +21,22 @@ export default Ember.Controller.extend({
 			this.set('state', true);
 			var temp= this.get('url1');
 			this.set('url',temp);
-		}		
+		},	
+
+		clean: function() {
+			this.set('clean', false);
+			var current= this.get('url');
+			this.set('store',current);
+			this.set('url',null);
+			//console.log('store:'+this.get('store'));
+		},	
+		
+		get: function() {
+			this.set('clean', true);
+			var current= this.get('store');
+			this.set('url',current);
+			//console.log('Url:'+this.get('url'));
+		},	
 	},
 	
 
