@@ -4,7 +4,8 @@ export default Ember.Controller.extend({
 	url:  'assets/images/a2.png',
 	url1: 'assets/images/a2.png',
 	url2: 'assets/images/a1.png',
-	name: '',
+	name1: 'Jeremy',
+	initial: '',
 	state: true,
 	
 	actions: {
@@ -19,5 +20,7 @@ export default Ember.Controller.extend({
 			var temp= this.get('url1');
 			this.set('url',temp);
 		}		
-	}
+	},
+	
+
 });
