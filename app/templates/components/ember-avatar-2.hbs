@@ -1,0 +1,16 @@
+<div class="{{toggle}}">
+	<div class="flipper">
+		<div class="front">	
+			{{#if avatarUrl}}
+				<img src="{{avatarUrl}}"> <br>
+			{{else}}	
+				{{firstLetter}} <br>
+			{{/if}}	
+		</div>	
+		<div class="back">
+				{{mark}} 
+		</div>
+	</div>	
+</div>	
+	
+{{yield}}
