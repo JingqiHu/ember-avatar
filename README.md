@@ -3,16 +3,23 @@ ember-avatar
 
 Main-function:
 
-1. First choice URL to display the picture.  (***always URL priority***）
-    Second choice Name to display the first letter of the name.
-    If neither URL and Name exist display message.
-2. Click the letter or picture to mark.
+1. First choice: URL   (***always URL priority***）
+   - display the picture. 
+   Second choice: Name
+   - display the first letter of the name.
+    If neither URL and Name exists
+   - display message.
+2. Click the letter or picture to mark. (flip)
+3. Dynamic size 
 
 Sub-function
 
 1. Clean/Get URL
 2. Switch pictures
 
-How to Use
+How to view
 
-Coming soon...
+1. Open GitShell
+  - ember serve
+2. Open browser 
+  - localhost:4200/test
