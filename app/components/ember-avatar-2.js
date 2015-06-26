@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   address: '',
   name: '',
-  size: '128px',
+  size: '',
   mark: '✓',
   unmarked: true,
   toggle: 'flip-container',
@@ -21,6 +21,14 @@ export default Ember.Component.extend({
   
 	return name[0];
   }.property('name'),
+  
+  /*
+  getSize: function() {
+    var size = this.get('size');
+
+    return  size;
+  }.property('size'),  
+	*/
 	
   click: function() {
 	var marked = this.get('unmarked');
@@ -36,9 +44,11 @@ export default Ember.Component.extend({
 	}
 	this.set('unmarked',!marked); 	
   },
-  
+ 
+
   didInsertElement: function() {
 	  var size = this.get('size');
+	  console.log(size);
 	  this.$().height(size);
 	  this.$().width(size);
   },

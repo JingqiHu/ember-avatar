@@ -10,7 +10,7 @@
 
 .flip-container, .front, .back{
 	width: 128px;
-	height: 128px;
+	height:128px;
 }
 
 /* flip speed goes here */
@@ -23,15 +23,17 @@
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-	position: absolute;	
-	left: 0;
-	font-size: 100px;
+	position: absolute;		
+	font-size: 500%;
 	text-align: center;
 }
 
 /* front pane, placed above back */
 .front {
 	z-index: 2;
+	color: white;
+	background-color: black;
+	border-radius: 50%;
 }
 
 /* front img*/
@@ -39,7 +41,15 @@
 	border-radius: 50%;
 }
 
+/* front letter*/
+.front .letter{
+	padding-top: 15px;
+}
+
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+	color: white;
+	background-color: red;
+	border-radius: 50%;
 }

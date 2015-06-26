@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   address: '',
   name: '',
+  size: '',
   mark: '✓',
   unmarked: true,
 	
